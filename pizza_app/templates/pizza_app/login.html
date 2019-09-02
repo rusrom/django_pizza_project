@@ -11,8 +11,11 @@
     <title>Главнвя страница</title>
 </head>
 <body>
-    <h2>Hello PizzaShop!</h2>
-    <a href="{% url 'signout' %}">Выйти</a>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Войти</button>
+    </form>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
