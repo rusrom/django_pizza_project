@@ -8,5 +8,11 @@
 </head>
 <body>
     <h1>SignUp</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ pizzashop_form.as_p }}
+        <button type="submit">Регистрация</button>
+    </form>
 </body>
 </html>
